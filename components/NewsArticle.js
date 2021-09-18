@@ -1,14 +1,18 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { Button, View, Text } from 'react-native';
+import { Button, View, Text, TouchableOpacity } from 'react-native';
 
 const NewsArticle = (props) => {
-	console.log(props.data);
+
+	const showSingleArticle = () => {
+		// props.navigation.navigate('SingleArticle', props.data);
+	}
+
 	return (
-		<View style={styles.articleWrap}>
+		<TouchableOpacity onPress={showSingleArticle} style={styles.articleWrap}>
 			<Text style={styles.title}>{props.data.title}</Text>
 			<Text style={styles.body}>{props.data.body}</Text>
-		</View>
+		</TouchableOpacity>
 	);
 }
 
