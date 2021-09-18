@@ -22,7 +22,7 @@ function Dashboard({ navigation }) {
 				<ScrollView>
 					<Text>Total: {newsArticles.length}</Text>
 					{
-						newsArticles.map( article => (
+						newsArticles.map((article, index) => (
 							<NewsArticle data={article} navigation={navigation} />
 						))
 					}
